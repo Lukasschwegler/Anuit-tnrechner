@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Felder und Button Beispiel</title>
+</head>
+<body>
+
+<h2>Formular mit Eingabefeldern und Button</h2>
+
+<!-- Eingabefelder -->
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" placeholder="Geben Sie Ihren Namen ein">
+
+<br><br>
+
+<label for="age">Alter:</label>
+<input type="number" id="age" name="age" placeholder="Geben Sie Ihr Alter ein">
+
+<br><br>
+
+<label for="age">Alter:</label>
+<input type="number" id="age" name="age" placeholder="Geben Sie Ihr Alter ein">
+
+<br><br>
+
+
+<!-- Button zum Ausführen -->
+<button onclick="processInput()">Absenden</button>
+
+<!-- Ergebnisbereich -->
+<p id="result"></p>
+
+<script>
+// Funktion zum Verarbeiten der Eingabe
+function processInput() {
+    // Werte aus den Eingabefeldern abrufen
+    const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+
+    // Überprüfen, ob die Felder ausgefüllt sind
+    if(name && age) {
+        document.getElementById("result").innerText = `Hallo ${name}, du bist ${age} Jahre alt!`;
+    } else {
+        document.getElementById("result").innerText = "Bitte füllen Sie alle Felder aus.";
+    }
+}
+
+
+</script>
+
+</body>
+</html>
 
